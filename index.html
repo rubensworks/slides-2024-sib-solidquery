@@ -67,16 +67,16 @@
 	
     <section id="index" class="slide index" inlist="" rel="schema:hasPart" resource="#index">
       <ul>
-        <li><a href="#index-solid">What is Solid</a></li>
-		<li><a href="#index-query">How to query across Solid pods</a></li>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
         <li><a href="#index-challenges">Challenges and opportunities</a></li>
       </ul>
     </section>
 
     <section id="index-solid" class="slide index" inlist="" rel="schema:hasPart" resource="#index-solid">
       <ul>
-        <li class="current"><a href="#index-solid">What is Solid</a></li>
-		<li><a href="#index-query">How to query across Solid pods</a></li>
+        <li class="current"><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
         <li><a href="#index-challenges">Challenges and opportunities</a></li>
       </ul>
     </section>
@@ -187,24 +187,140 @@
     
     <section id="index-query" class="slide index" inlist="" rel="schema:hasPart" resource="#index-query">
       <ul>
-        <li><a href="#index-solid">What is Solid</a></li>
-		<li class="current"><a href="#index-query">How to query across Solid pods</a></li>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li class="current"><a href="#index-query">How to query across Solid pods?</a></li>
         <li><a href="#index-challenges">Challenges and opportunities</a></li>
       </ul>
     </section>
     
+    <section id="query-centralized" class="slide" inlist="" rel="schema:hasPart" resource="#query-centralized">
+        <h2 property="schema:name">SPARQL processing over centralized data</h2>
+        <img src="img/sparql-centralized.svg" width="35%" style="float: right" />
+		<ul>
+			<li>
+				<h3>Dataset is collocated with query engine</h3>
+				<span class="indent">All data is known beforehand</span>
+			</li>
+			<li>
+				<h3>Single dataset</h3>
+				<span class="indent">Combining multiple datasets is more difficult</span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-decentralized" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-decentralized">
+        <h2 property="schema:name">How to query over <em>decentralized</em> data?</h2>
+        <center><img src="img/sparql-decentralized.svg" width="75%" /></center>
+		<ul>
+			<li>
+				<h3>Data and query engine are <em>not</em> collocated</h3>
+				<span class="indent">Query engine runs on a separate machine</span>
+			</li>
+			<li>
+				<h3>Not just one datasets</h3>
+				<span class="indent">Data is spread over the Web into multiple <strong>documents</strong></span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-federation" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-federation">
+        <h2 property="schema:name">Federated SPARQL querying?</h2>
+        <center><img src="img/sparql-federated.svg" width="35%" /></center>
+		<ul>
+			<li>
+				<h3>❌ Sources are SPARQL endpoints</h3>
+				<span class="indent">Solid pods offer no SPARQL endpoints</span>
+			</li>
+			<li>
+				<h3>❌ Federation algorithms assume public data</h3>
+				<span class="indent">Solid requires permissioning</span>
+			</li>
+			<li>
+				<h3>❌ Federation algorithms have limited scalability</h3>
+				<span class="indent">In Solid, data may be spread across millions of sources</span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-ltqp" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-ltqp">
+        <h2 property="schema:name">Link Traversal Query Processing!</h2>
+        <center><img src="img/sparql-decentralized-links.svg" width="35%" /></center>
+		<ul>
+			<li>
+				<h3>✅ Follow link across documents during query execution</h3>
+				<span class="indent">Solid LDP uses Linked Data documents</span>
+			</li>
+			<li>
+				<h3>✅ Document-level authorization</h3>
+				<span class="indent">Solid requires permissioning</span>
+			</li>
+			<li>
+				<h3>❓ Is link traversal fast enough</h3>
+				<span class="indent"></span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="ltqp-open-data" class="slide" inlist="" rel="schema:hasPart" resource="#ltqp-open-data">
+      <h2 property="schema:name" style="font-size: 1.65em">LTQP was designed for querying Linked <em>Open</em> Data</h2>
+      <ul>
+          <li>
+          	  <h3>Introduced more than a decade ago</h3>
+			  <span class="indent">Hartig, O.: SPARQL for a Web of Linked Data: Semantics and computability</span>
+          </li>
+          <li>
+          	  <h3>Web of Linked Open Data as a globally distributed dataspace</h3>
+			  <span class="indent">No prior indexing in a central location</span>
+          </li>
+          <li>
+          	  <h3>Follow-your-nose principle</h3>
+			  <span class="indent">Discover data <em>during</em> query execution</span>
+          </li>
+          <li>
+          	  <h3>No practical usage so far</h3>
+			  <span class="indent">Due to performance concerns (large number of links, non-termination)</span><br \>
+              <span class="indent">Additional assumptions with Solid &rarr; potential for improved performance!</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="discovery-approaches" class="slide" inlist="" rel="schema:hasPart" resource="#discovery-approaches">
+      <h2 property="schema:name" style="font-size: 1.85em">Exploiting structural properties of Solid</h2>
+      <ul>
+          <li>
+          	<h3>Linked Data Platform</h3>
+            <span class="indent">Recurse all directories and resources to find all triples in a pod</span>
+          </li>
+          <li>
+          	<h3>Type Indexes</h3>
+			<span class="indent">Based on classes in a query, find triples in documents for type mapping</span>
+            <pre>SELECT ?post WHERE {
+  ?post a &lt;http://example.org/Post&gt;;
+    &lthttp://example.org/title&gt; ?name.
+}</pre>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="ltqp-results" class="slide" inlist="" rel="schema:hasPart" resource="#ltqp-results">
+      <h2 property="schema:name" style="font-size: 1.85em">Non-complex queries can be answered in the order of seconds</h2>
+      <center><img src="img/querytimes_d2-3.svg" width="100%" /></center>
+      <br \>
+      <span class="indent" style="font-style: italic; font-size: 0.65em">Taelman, R. Link traversal query processing over decentralized environments with structural assumptions. ISWC 2023.</span>
+    </section>
+
     <section id="index-challenges" class="slide index" inlist="" rel="schema:hasPart" resource="#index-challenges">
       <ul>
-        <li><a href="#index-solid">What is Solid</a></li>
-		<li><a href="#index-query">How to query across Solid pods</a></li>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
         <li class="current"><a href="#index-challenges">Challenges and opportunities</a></li>
       </ul>
     </section>
 	
     <section id="index-final" class="slide index" inlist="" rel="schema:hasPart" resource="#index-final">
       <ul>
-        <li><a href="#index-solid">What is Solid</a></li>
-		<li><a href="#index-query">How to query across Solid pods</a></li>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
         <li><a href="#index-challenges">Challenges and opportunities</a></li>
       </ul>
     </section>
