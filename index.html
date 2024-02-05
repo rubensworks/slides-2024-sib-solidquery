@@ -53,35 +53,386 @@
             <a href="https://www.adweek.com/programmatic/independent-ad-tech-sees-opportunity-amid-the-escalation-of-the-walled-gardens/" style="color: white">Image credit</a>
         </div>
     </section>
+    
+    <section id="start-solid" class="slide" inlist="" rel="schema:hasPart" resource="#start-solid">
+        <h2 property="schema:name" class="big" style="margin-top: 20px; font-size: 2.2em">Solid aims to re-decentralize the Web</h2>
+        <h3 style="font-size: 1.6em; margin-top: -15px">A Web-based decentralization ecosystem</h3>
+        <ul style="font-size: 1.3em">
+            <li><h3 style="color:black">Users are in full control over their own data</h3></li>
+            <li><h3 style="color:black">Built on open standards</h3></li>
+            <li><h3 style="color:black">Compatible with Web technologies</h3></li>
+        </ul>
+        <img src="img/solid-logo.svg" alt="Solid Logo" width="200px" style="float:right; margin-top: -150px" />
+    </section>
 	
     <section id="index" class="slide index" inlist="" rel="schema:hasPart" resource="#index">
       <ul>
-        <li><a href="#index-a">TODO</a></li>
-		<li><a href="#index-b">TODO</a></li>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
+        <li><a href="#index-challenges">Challenges and opportunities</a></li>
+      </ul>
+    </section>
+
+    <section id="index-solid" class="slide index" inlist="" rel="schema:hasPart" resource="#index-solid">
+      <ul>
+        <li class="current"><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
+        <li><a href="#index-challenges">Challenges and opportunities</a></li>
       </ul>
     </section>
     
-    <section id="index-a" class="slide index" inlist="" rel="schema:hasPart" resource="#index-a">
-      <ul>
-        <li class="current"><a href="#index-a">TODO</a></li>
-		<li><a href="#index-b">TODO</a></li>
-      </ul>
-    </section>
-	
-    <section id="some-slide" class="slide" inlist="" rel="schema:hasPart" resource="#some-slide">
-      <h2 property="schema:name">TODO: A regular slide</h2>
+    <section id="standards-implications" class="slide" inlist="" rel="schema:hasPart" resource="#standards-implications">
+      <h2 property="schema:name">Solid is a collection of open standards</h2>
       <ul>
           <li>
-          	  <h3>A</h3>
-			  <span class="indent">TODO: Description</span>
+          	  <h3>Aligned with Web standards</h3>
+			  <span class="indent">Back to the original concept of a decentralised Web</span>
           </li>
-          <li>B</li>
-          <li>C</li>
+          <li>
+          	  <h3>Not proprietary</h3>
+              <span class="indent">Everyone can implement these standards</span><br \>
+              <span class="indent">More competition &rarr; more innovation &rarr; better for users</span>
+          </li>
+          <li>
+          	  <h3>Everyone can contribute</h3>
+			  <span class="indent">New versions of standards can be created</span>
+          </li>
       </ul>
     </section>
+    
+    <section id="ecosystem" class="slide" inlist="" rel="schema:hasPart" resource="#ecosystem">
+      <h2 property="schema:name">Solid is an ecosystem</h2>
+      <ul>
+          <li>
+          	  <h3>Not a platform or application</h3>
+			  <span class="indent">Not meant as a replacement for others</span>
+          </li>
+          <li>
+          	  <h3>A collection of open standards</h3>
+			  <span class="indent">To enable apps to be interoperable</span>
+          </li>
+          <li>
+          	  <h3>Not owned by anyone</h3>
+			  <span class="indent">Individuals, companies, and organisations can use and build at Solid</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="pods" class="slide" inlist="" rel="schema:hasPart" resource="#pods">
+      <h2 property="schema:name">Personal data pods</h2>
+      <h3>Full control of where your pod is stored and who can access it</h2>
+      <center>
+          <img src="img/solid-pods.svg" alt="Solid Pods" width="500px" />
+      </center>
+    </section>
+    
+    <section id="pods-storage" class="slide" inlist="" rel="schema:hasPart" resource="#pods-storage">
+      <h2 property="schema:name">Pods can store any kind of data</h2>
+      <h3>Personal data, photo's, friends, ...</h2>
+      <center>
+          <img src="img/pods-storage.svg" alt="Solid Pods Storage" width="500px" />
+      </center>
+    </section>
+    
+    <section id="decouple-data-app" class="slide" inlist="" rel="schema:hasPart" resource="#decouple-data-app">
+      <h2 property="schema:name">Data become decoupled from apps</h2>
+      <center>
+          <img src="img/social-network-central.svg" alt="Centralized App" width="400px" />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="img/social-network-solid.svg" alt="Solid App" width="400px" />
+      </center>
+      <ul>
+          <li>
+          	  <h3>Today: <em>data and app are tightly coupled</em></h3>
+              <span class="indent">No choice over where and how data is stored, and who can access it</span>
+          </li>
+          <li>
+          	  <h3>Solid: <em>data and app are decoupled</em></h3>
+			  <span class="indent">Apps require read/write permissions from the user</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="app-changes" class="slide" inlist="" rel="schema:hasPart" resource="#app-changes">
+      <h2 property="schema:name">A paradigm shift in app design</h2>
+      <ul>
+          <li>
+          	  <h3>Storage of data is decentralised</h3>
+			  <span class="indent">Data is stored in the user's pod instead of in the app</span>
+          </li>
+          <li>
+          	  <h3>Combining multiple data pods</h3>
+			  <span class="indent">Apps become views over one or more data pods</span>
+          </li>
+          <li>
+          	  <h3>Explicit access control</h3>
+			  <span class="indent">Apps can only view or modify (parts of) your data after explicit approval</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="choice-app" class="slide" inlist="" rel="schema:hasPart" resource="#choice-app">
+      <h2 property="schema:name">Users gain freedom to choose apps</h2>
+      <ul>
+          <li>
+          	  <h3>Data can be managed with different apps</h3>
+			  <span class="indent">Because they are decoupled</span>
+          </li>
+          <li>
+          	  <h3>Enables more innovation from app developers</h3>
+			  <span class="indent">Reuse existing data, and focus on user experience instead of data collection</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="index-query" class="slide index" inlist="" rel="schema:hasPart" resource="#index-query">
+      <ul>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li class="current"><a href="#index-query">How to query across Solid pods?</a></li>
+        <li><a href="#index-challenges">Challenges and opportunities</a></li>
+      </ul>
+    </section>
+    
+    <section id="query-centralized" class="slide" inlist="" rel="schema:hasPart" resource="#query-centralized">
+        <h2 property="schema:name">SPARQL processing over centralized data</h2>
+        <img src="img/sparql-centralized.svg" width="35%" style="float: right" />
+		<ul>
+			<li>
+				<h3>Dataset is collocated with query engine</h3>
+				<span class="indent">All data is known beforehand</span>
+			</li>
+			<li>
+				<h3>Single dataset</h3>
+				<span class="indent">Combining multiple datasets is more difficult</span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-decentralized" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-decentralized">
+        <h2 property="schema:name">How to query over <em>decentralized</em> data?</h2>
+        <center><img src="img/sparql-decentralized.svg" width="75%" /></center>
+		<ul>
+			<li>
+				<h3>Data and query engine are <em>not</em> collocated</h3>
+				<span class="indent">Query engine runs on a separate machine</span>
+			</li>
+			<li>
+				<h3>Not just one datasets</h3>
+				<span class="indent">Data is spread over the Web into multiple <strong>documents</strong></span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-federation" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-federation">
+        <h2 property="schema:name">Federated SPARQL querying?</h2>
+        <center><img src="img/sparql-federated.svg" width="35%" /></center>
+		<ul>
+			<li>
+				<h3>❌ Sources are SPARQL endpoints</h3>
+				<span class="indent">Solid pods offer no SPARQL endpoints</span>
+			</li>
+			<li>
+				<h3>❌ Federation algorithms assume public data</h3>
+				<span class="indent">Solid requires permissioning</span>
+			</li>
+			<li>
+				<h3>❌ Federation algorithms have limited scalability</h3>
+				<span class="indent">In Solid, data may be spread across millions of sources</span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-ltqp" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-ltqp">
+        <h2 property="schema:name">Link Traversal Query Processing!</h2>
+        <center><img src="img/sparql-decentralized-links.svg" width="35%" /></center>
+		<ul>
+			<li>
+				<h3>✅ Follow link across documents during query execution</h3>
+				<span class="indent">Solid LDP uses Linked Data documents</span>
+			</li>
+			<li>
+				<h3>✅ Document-level authorization</h3>
+				<span class="indent">Solid requires permissioning</span>
+			</li>
+			<li>
+				<h3>❓ Is link traversal fast enough</h3>
+				<span class="indent"></span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="ltqp-open-data" class="slide" inlist="" rel="schema:hasPart" resource="#ltqp-open-data">
+      <h2 property="schema:name" style="font-size: 1.65em">LTQP was designed for querying Linked <em>Open</em> Data</h2>
+      <ul>
+          <li>
+          	  <h3>Introduced more than a decade ago</h3>
+			  <span class="indent">Hartig, O.: SPARQL for a Web of Linked Data: Semantics and computability</span>
+          </li>
+          <li>
+          	  <h3>Web of Linked Open Data as a globally distributed dataspace</h3>
+			  <span class="indent">No prior indexing in a central location</span>
+          </li>
+          <li>
+          	  <h3>Follow-your-nose principle</h3>
+			  <span class="indent">Discover data <em>during</em> query execution</span>
+          </li>
+          <li>
+          	  <h3>No practical usage so far</h3>
+			  <span class="indent">Due to performance concerns (large number of links, non-termination)</span><br \>
+              <span class="indent">Additional assumptions with Solid &rarr; potential for improved performance!</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="discovery-approaches" class="slide" inlist="" rel="schema:hasPart" resource="#discovery-approaches">
+      <h2 property="schema:name" style="font-size: 1.85em">Exploiting structural properties of Solid</h2>
+      <ul>
+          <li>
+          	<h3>Linked Data Platform</h3>
+            <span class="indent">Recurse all directories and resources to find all triples in a pod</span>
+          </li>
+          <li>
+          	<h3>Type Indexes</h3>
+			<span class="indent">Based on classes in a query, find triples in documents for type mapping</span>
+            <pre>SELECT ?post WHERE {
+  ?post a &lt;http://example.org/Post&gt;;
+    &lthttp://example.org/title&gt; ?name.
+}</pre>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="ltqp-results" class="slide" inlist="" rel="schema:hasPart" resource="#ltqp-results">
+      <h2 property="schema:name" style="font-size: 1.85em">Non-complex queries can be answered in the order of seconds</h2>
+      <center><img src="img/querytimes_d2-3.svg" width="100%" /></center>
+      <br \>
+      <span class="indent" style="font-style: italic; font-size: 0.65em">Taelman, R. Link traversal query processing over decentralized environments with structural assumptions. ISWC 2023.</span>
+    </section>
+
+    <section id="index-challenges" class="slide index" inlist="" rel="schema:hasPart" resource="#index-challenges">
+      <ul>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
+        <li class="current"><a href="#index-challenges">Challenges and opportunities</a></li>
+      </ul>
+    </section>
+    
+    <section id="query-planning" class="slide" inlist="" rel="schema:hasPart" resource="#query-planning">
+      <h2 property="schema:name">Inefficient query plans</h2>
+      <ul>
+          <li>
+          	  <h3>Traditionally: number of links is bottleneck for link traversal</h3>
+			  <span class="indent">Due to structural properties of Solid pods, this is less of a problem</span>
+          </li>
+          <li>
+          	  <h3>Query engines must use heuristics for query planning</h3>
+			  <span class="indent">No statistics available prior to query execution</span><br />
+              <span class="indent" style="font-size: 0.6em">Hartig, Olaf. "Zero-knowledge query planning for an iterator implementation of link traversal based query execution."</span>
+          </li>
+          <li>
+          	  <h3>Need for adaptive query planning</h3>
+			  <span class="indent">Modify query plan during traversal</span><br />
+              <span class="indent">Discovery of cardinality estimates and indexes</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="hybrid" class="slide" inlist="" rel="schema:hasPart" resource="#hybrid">
+      <h2 property="schema:name">Hybrid query execution</h2>
+      <img src="img/vault-query-api.svg" alt="Query API in a Solid pod" width="250px" style="float: right" />
+      <ul>
+          <li>
+          	  <h3>Solid pods are currently document-based</h3>
+			  <span class="indent">Collection of Linked Data documents</span>
+          </li>
+          <li>
+          	  <h3>Pods could expose more expressive interfaces</h3>
+			  <span class="indent">SPARQL endpoints, TPF, SPF, ...</span><br />
+          </li>
+          <li>
+          	  <h3>Need for query execution over heterogeneous sources</h3>
+			  <span class="indent">How to do this in an adaptive manner?</span><br />
+              <span class="indent">Query engine only discover this interface during query execution</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="exploit-structure" class="slide" inlist="" rel="schema:hasPart" resource="#exploit-structure">
+      <h2 property="schema:name">Exploit structural information</h2>
+      <img src="img/pod-structure.svg" alt="Structure in a Solid pod" width="250px" style="float: right" />
+      <ul>
+          <li>
+          	  <h3>Users can structure their pod in a certain way</h3>
+			  <span class="indent">Place all photos in directories based on country</span>
+          </li>
+          <li>
+          	  <h3>Query engines may exploit this information</h3>
+			  <span class="indent">If pods expose this information</span><br />
+          </li>
+          <li>
+          	  <h3>Relevant for query planning</h3>
+			  <span class="indent">Pruning of documents and prioritization</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="reasoning" class="slide" inlist="" rel="schema:hasPart" resource="#reasoning">
+      <h2 property="schema:name">Reasoning at query time</h2>
+      <ul>
+          <li>
+          	  <h3>Different pods/apps may use different vocabularies</h3>
+			  <span class="indent">Schema.org, FOAF, Wikidata, ...</span>
+          </li>
+          <li>
+          	  <h3>Apps issue queries in a single vocabulary</h3>
+			  <span class="indent">Query engine should perform schema alignment</span>
+          </li>
+          <li>
+          	  <h3>Reasoning over partial and streaming knowledge</h3>
+			  <span class="indent">How to do this efficiently?</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="aggregation" class="slide" inlist="" rel="schema:hasPart" resource="#aggregation">
+      <h2 property="schema:name">Summarization across multiple pods</h2>
+      <ul>
+          <li>
+          	  <h3>Data may be aggregated across multiple Solid pods</h3>
+			  <span class="indent">Usage within family context, work place, ...</span>
+          </li>
+          <li>
+          	  <h3>Query engines can exploit these summaries</h3>
+			  <span class="indent">Query planning and source selection</span>
+          </li>
+      </ul>
+      <center><img src="img/pod-summary.svg" alt="Summary over Solid pods" width="400px" /></center>
+    </section>
 	
+    <section id="index-final" class="slide index" inlist="" rel="schema:hasPart" resource="#index-final">
+      <ul>
+        <li><a href="#index-solid">What is Solid?</a></li>
+		<li><a href="#index-query">How to query across Solid pods?</a></li>
+        <li><a href="#index-challenges">Challenges and opportunities</a></li>
+      </ul>
+    </section>
+    
     <section id="conclusion" class="slide" inlist="" rel="schema:hasPart" resource="#conclusion">
-      <h2 property="schema:name" class="big">TODO: Conclusion</h2>
+      <h2 property="schema:name" class="big">Solid aims to redecentralise the Web</h2>
+      <ul>
+          <li>
+          	  <h3>Giving everyone a personal data pod</h3>
+			  <span class="indent">In full control of the user</span>
+          </li>
+          <li>
+          	  <h3>Data become decoupled from apps</h3>
+			  <span class="indent">Apps have to ask permission to access your data</span>
+          </li>
+          <li>
+          	  <h3>Link Traversal is promising for querying over pods</h3>
+			  <span class="indent">Requires further research</span>
+          </li>
+      </ul>
     </section>
 
     <footer>
